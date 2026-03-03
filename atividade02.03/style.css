@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Seleciona o primeiro elemento de um determinado tipo dentro de um mesmo pai */
+div:first-of-type {
+  background: lightblue;
+}
+
+/* Seleciona o último elemento daquele tipo dentro do pai,
+Estiliza o último <div> do container. */
+div:last-of-type {
+  background: lightcoral;
+}
+
+/* Aplica estilo quando o usuário passa o mouse sobre o elemento. */
+.hover:hover {
+  background: yellow;
+}
+
+/* Aplica estilo quando o elemento está em foco (ex: clicado ou selecionado em um input). */
+input:focus {
+  border: 3px solid blue;
+  outline: none;
+}
+
+
+/* Seleciona links que já foram visitados pelo usuário. */
+a:link {
+  color: blue;
+}
+
+/* Seleciona links que ainda não foram visitados. */
+a:visited {
+  color: purple;
+}
+
+/* Aplica estilo no momento em que o elemento está sendo clicado. */
+button:active {
+  transform: scale(0.9);
+}
+
+/* Seleciona elementos com base na posição dentro do pai. */
+li:nth-child(2) {
+  background: lightgreen;
+}
+
+/* Também pode usar fórmulas:
+li:nth-child(2n) /* de 2 em 2 */
+li:nth-child(odd) {
+  font-weight: bold;
+}
+
+/* Seleciona o elemento que é o primeiro filho do pai, independente do tipo.
+Diferença importante:
+first-child → primeiro filho (qualquer tag)
+first-of-type → primeiro daquele tipo específico */
+p:first-child {
+  color: red;
+}
+
+/* Seleciona o elemento que é o último filho do pai. */
+p:last-child {
+  color: green;
+}
+
+/* Seleciona elementos que não possuem conteúdo dentro (nem texto nem outros elementos). */
+.caixa:empty {
+  width: 100px;
+  height: 30px;
+  background: gray;
+}
+
+/* Seleciona elementos que não correspondem ao seletor dentro do parêntese. */
+div:not(.especial) {
+  border: 2px solid black;
+  margin: 5px;
+  padding: 5px;
+}
