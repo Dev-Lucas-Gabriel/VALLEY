@@ -1,8 +1,12 @@
+/* RESET + BOX-SIZING
+   Remove margens e paddings padrão do navegador
+   border-box faz width incluir padding e border */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 
 body {
     height: 100vh;
@@ -13,38 +17,31 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Estiliza TODOS os <p> da página */
+p {
+    font-size: 14px;
+    color: #444;
+}
 
 .card {
-    width: 350px;
+    width: 350px;        
+    height: auto;          
     background: #ffffff;
-    padding: 30px;
+    padding: 30px;       
+    margin: 20px;         
     border-radius: 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #6c63ff;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     text-align: center;
     transition: 0.3s ease;
 }
 
-.profile-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    /* Mantém proporção sem distorcer. */
-    display: block;
-    margin: 0 auto 15px auto;
-    /* top | right | bottom | left - respectivamente*/
-    border: 4px solid #6c63ff;
-}
-
-.profile-img:hover {
-    border: 4px solid #dfdfe4;
-    transition: 0.3s ease-in;
-}
 
 .card:hover {
     transform: translateY(-10px);
 }
-
 
 #name {
     font-size: 24px;
@@ -52,12 +49,25 @@ body {
     color: #222;
 }
 
+/* TESTE DE CASCATA */
+
+
+.role {
+    color: red;
+}
 
 .role {
     font-size: 14px;
-    color: #777;
+    color: #777; 
     margin-bottom: 20px;
 }
+
+/*
+EXPLICAÇÃO:
+As duas regras têm a mesma especificidade (.classe).
+A que aparece por último no código vence.
+Isso é a CASCATA do CSS.
+*/
 
 
 .bio p {
@@ -67,20 +77,42 @@ body {
     line-height: 1.6;
 }
 
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 15px auto;
+    border-width: 4px;
+    border-style: solid;
+    border-color: #6c63ff;
+}
+
+.profile-img:hover {
+    border-color: #dfdfe4;
+    transition: 0.3s ease-in;
+}
 
 .skills {
     margin-top: 20px;
-    display: flex;
+    display: flex;         
     justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
+
     cursor: pointer;
 }
 
 .skills span {
     background: #6c63ff;
     color: white;
-    padding: 6px 12px;
+
+    padding-top: 6px;
+    padding-right: 12px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+
     border-radius: 20px;
     font-size: 12px;
     transition: 0.3s;
@@ -88,4 +120,13 @@ body {
 
 .skills span:hover {
     background: #4b44d4;
+}
+
+
+.bio {
+    margin-top: 15px;
+}
+
+.skills {
+    margin-top: 20px;
 }
