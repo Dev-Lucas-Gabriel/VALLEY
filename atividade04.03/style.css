@@ -7,14 +7,26 @@
     box-sizing: border-box;
 }
 
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
 
 body {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #1f1f2e, #3b3ba0);
+    background-color: #000;
     font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
 }
 
 /* Estiliza TODOS os <p> da página */
@@ -23,12 +35,13 @@ p {
     color: #444;
 }
 
+
 .card {
-    width: 350px;        
-    height: auto;          
+    width: 350px;
+    height: auto;
     background: #ffffff;
-    padding: 30px;       
-    margin: 20px;         
+    padding: 30px;
+    margin: 20px;
     border-radius: 20px;
     border-width: 2px;
     border-style: solid;
@@ -36,6 +49,8 @@ p {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     text-align: center;
     transition: 0.3s ease;
+    position: relative;
+    z-index: 1;
 }
 
 
@@ -58,7 +73,7 @@ p {
 
 .role {
     font-size: 14px;
-    color: #777; 
+    color: #777;
     margin-bottom: 20px;
 }
 
@@ -96,7 +111,7 @@ Isso é a CASCATA do CSS.
 
 .skills {
     margin-top: 20px;
-    display: flex;         
+    display: flex;
     justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
@@ -129,4 +144,93 @@ Isso é a CASCATA do CSS.
 
 .skills {
     margin-top: 20px;
+}
+
+.container .snow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+
+
+.container .snow span {
+    min-width: 5px;
+    height: 5px;
+    background: #4b44d4;
+    position: absolute;
+    top: -10vh;
+    margin: 0 1vw;
+    left: calc(5% * var(--i));
+    min-width: 5px;
+    height: 5px;
+    background: #4b44d4;
+    border-radius: 50%;
+    box-shadow: -100px 20px 5px #4b44d4, -100px 20px 10px #4b44d4;
+    animation: animateSnow calc(75s / var(--i)) linear infinite;
+}
+
+@keyframes animateSnow {
+    0% {
+        transform: translateY(-10vh);
+    }
+
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+.container .snow sppan:nth-of-type(even) {
+    min-width: 8px;
+    height: 8px;
+}
+
+.card {
+    animation: cardEntrada 1s ease;
+}
+
+@keyframes cardEntrada {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skills span:hover {
+    background: #4b44d4;
+    transform: scale(1.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(108,99,255,0.6);
+}
+
+.typing {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #6c63ff;
+    width: 0;
+    animation: typing 3s steps(30,end) forwards, removeCursor 0s 3s forwards;
+}
+
+@keyframes typing {
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes removeCursor {
+    to {
+        border-right: none;
+    }
 }
