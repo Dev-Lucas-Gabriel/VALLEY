@@ -10,7 +10,7 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:15px 40px; /* respectivamente - 15px: cima/baixo ---- 40px: esqueda/direita */
-background:#17173c;
+background:#000000;
 color:white;
 }
 
@@ -31,7 +31,7 @@ text-decoration:none;
 .btn-login{
 padding:8px 18px;
 border:none;
-background:#4b44ff;
+background:#a855f7;
 color:white;
 cursor:pointer;
 border-radius: 20px;
@@ -63,14 +63,14 @@ color:#333;
 }
 
 .menu a:hover{
-color: #4b44ff;
+color: #a855f7;
 }
 
 .btn-menu{
 margin-top:auto; 
 padding:10px;
 border:none;
-background:#4b44ff;
+background:#a855f7;
 color:white;
 border-radius: 20px;
 cursor: pointer;
@@ -106,6 +106,6 @@ box-shadow:0 2px 10px rgba(0,0,0,0.1);
 .destaque{
 flex-grow:2; 
 order:-1;
-background:#4b44ff;
+background:#a855f7;
 color:white;
 }

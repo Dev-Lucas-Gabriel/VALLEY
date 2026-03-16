@@ -1,0 +1,113 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins';
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.login-card{
+width:900px;
+height:450px;
+background:#f2f2f2;
+border-radius:15px; 
+display:flex;
+box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+
+.left{
+width:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.left img{
+width:80%;
+}
+
+.right{
+width:50%;
+padding:40px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.right h3{
+margin-bottom:25px;
+font-weight:600;
+}
+
+.input-box{
+margin-bottom:20px;
+}
+
+.input-box input{
+width:100%;
+padding:10px;
+border:none;
+border-bottom:1px solid #aaa;
+background:transparent;
+outline:none;
+}
+
+.options{
+display:flex;
+justify-content:space-between;
+font-size:14px;
+margin-bottom:20px;
+}
+
+.options a{
+text-decoration:none;
+color:#2aa7c9;
+}
+
+button{
+padding:12px;
+border:none;
+border-radius:25px;
+background:#49bcd3;
+color:white;
+font-size:16px;
+cursor:pointer;
+margin-bottom:15px;
+}
+
+button:hover{
+background:#36a8be;
+}
+
+.register{
+font-size:14px;
+margin-bottom:20px;
+}
+
+.register a{
+color:#2aa7c9;
+text-decoration:none;
+}
+
+.social{
+text-align:center;
+}
+
+.icons{
+margin-top:10px;
+display:flex;
+justify-content:center;
+gap:20px;
+}
+
+.icons img{
+height: 35px;
+width: 40px;
+cursor: pointer;
+}
