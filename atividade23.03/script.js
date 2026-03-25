@@ -7,7 +7,7 @@ function parametro(nome) {
     console.log('Seu nome é:, ', nome)
 }
 //Argumento:
-parametro(Iris)
+parametro("Iris")
 
 // Questão 3:
 // Explique a diferença entre:
