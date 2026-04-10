@@ -125,3 +125,53 @@ for (i = 0; i <= 10; i++) {
     console.log(i)
 }
 
+// QUESTÃO 25
+for (let i = 0; i <= 10; i++) {
+  if (i % 2 === 0) {
+    console.log(i)
+  }
+}
+
+// QUESTÃO 26
+let i = 1
+
+while (i <= 5) {
+  console.log(i)
+  i++
+}
+
+// QUESTÃO 27
+let index = 10
+
+do {
+  console.log("Executou pelo menos uma vez")
+} while (index < 5)
+
+// QUESTÃO 28
+for (let i = 1; i <= 10; i++) {
+  if (i === 5) {
+    break
+  }
+  console.log(i)
+}
+
+// QUESTÃO 29
+
+for (let i = 1; i <= 5; i++) {
+  if (i === 3) {
+    continue
+  }
+  console.log(i)
+}
+
+// QUESTÃO 30
+const data = new Date()
+
+
+const dia = data.getDate()
+const mes = data.getMonth() + 1
+const ano = data.getFullYear()
+
+console.log(`${dia}/${mes}/${ano}`)
+console.log(data.toLocaleDateString("pt-BR"))
+console.log(data.toLocaleString("pt-BR"))
